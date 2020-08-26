@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>RPS Game</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // 
+      var RPS = ["Rock", "Paper", "Scissor"];
+      
+      for (var i = 0; i < RPS.length; i++) {
+        // 
+       var computerChoice = Math.random(RPS);
+
+        var rpsChoice = prompt("Pick between Rock, Paper, or Scissors");
+
+        var computerChoice = RPS[Math.floor(Math.random() * RPS.length)];
+
+
+        alert("You chose " + rpsChoice + " Computer chose " + computerChoice)
+      
+        var compare = function(rpsChoice,computerChoice){
+
+        if (rpsChoice === computerChoice)
+            return alert("Its a Tie")
+
+        }
+
+        
+        // 
+        console.log(RPS);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+CREATE DATABASE chirpy;
+USE chirpy;
+
+CREATE TABLE `chirps` (
+  id INT NOT NULL AUTO_INCREMENT,
+  author VARCHAR(100) NOT NULL,
+  chirp VARCHAR(100) NOT NULL,
+  PRIMARY KEY (id)
+);

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>The Boys Soundboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap File -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Overall Bootstrap Grid -->
+    <div class="container">
+
+      <!-- Jumbotron with Title -->
+      <div class="jumbotron">
+        <h1 class="text-center">
+          <strong>The Boys Soundboard</strong>
+        </h1>
+        <hr>
+        <div id="musicControls" class="text-center">
+          <button class="btn btn-dark btn-xs pause-button">
+            <span class="fa fa-pause"></span> Pause All</button>
+          <button class="btn btn-warning btn-xs modelo-button">
+            <span class="fa fa-music"></span> Modelo Time!</button>
+          <button class="btn btn-warning btn-xs leg-button">
+            <span class="fa fa-music"></span> Chicken Leg Piece </button>
+          
+            <button onclick="stopAll()" type="button">bajar volumen</button>
+          
+        </div>
+
+      </div>
+      
+         
+
+    <script>
+
+      // JavaScript function that wraps everything
+      $(document).ready(function() {
+
+        var captainPlanet = $(".captain-planet");
+
+
+        var audio = document.createElement("audio"),
+        i = audio.length;
+
+        while (i--) {
+          audio[i].volume = 0;
+             }
+
+        // Gets Link for Theme Song
+        var modeloElement = document.createElement("audio");
+        modeloElement.setAttribute("src", "assets/modelo-time.mp3");
+
+        var legElement = document.createElement("audio");
+        legElement.setAttribute("src", "assets/chicken-leg.mp3");
+
+        // Theme Button
+        $(".modelo-button").on("click", function() {
+          modeloElement.play();
+        });
+
+        $(".leg-button").on("click", function() {
+          legElement.play();
+        });
+
+        $(".pause-button").on("click", function() {
+          any.pause();
+        });
+
+       
+      });
+
+    </script>
+
+  </body>
+
+</html>
